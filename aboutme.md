@@ -21,4 +21,4 @@ Yeah, I beat the Chemical Engineering!! But guess what??? I've returned and now 
 
 Now, besides learning more about reactions and transfer phenomena, my goal is to **gain knowledge on Machine Learning and Data Science concepts and apply them in my masters**!
 
-Finaly, if you have a passion for soccer, games, machine learning, data science, wine, beer or any other random stuff and would like to have a great conversation, feel free to reach me out!!
+Finaly, if you have a passion for soccer, games, machine learning, data science, wine, beer or any other random stuff and would like to have a great conversation, feel free to reach me out using your preferred method at the footer of this website!!
