@@ -12,7 +12,7 @@ author: Lucas Queiroz
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
+  About: "aboutme"
   Projects: "TBD"
     #- Learn markdown: "https://www.markdowntutorial.com/"#
 
