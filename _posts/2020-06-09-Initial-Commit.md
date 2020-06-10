@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Initial Commit!
-subtitle: Each post also has a subtitle
-gh-badge: [star, fork, follow]
-tags: [First,post]
+subtitle: Welcome!
+tags: [First,post,welcome]
 ---
 
 Hey all !
