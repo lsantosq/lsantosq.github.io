@@ -2,11 +2,13 @@
 layout: page
 title: About me
 ---
+
+<div style="text-align: justify"> 
 Hello! My name is **Lucas Queiroz** and a Brazilian who loves soccer, video games, and science! I am fascinated by artificial intelligence and its applications nowadays. Here, I share more about myself! **Before you go**, if you want to contact me, you can use your preferred way at the footer of this website.
 
 ## Education
 
-I finished my BSc. degree in Chemical Engineering at _Universidade do Estado do Rio de Janeiro_ (UERJ) in Brazil, 2017. In 2015, I earned a full scholarship to study for one academic year at Purdue University in the United States. My preferred courses are Statistics, Process Control, and simulation.
+I finished my BSc. degree in Chemical Engineering at _Universidade do Estado do Rio de Janeiro_ (UERJ) in Brazil, 2017. In 2015, I earned a full scholarship to study for one academic year at _Purdue University_ in the United States. My preferred courses are Statistics, Process Control, and simulation.
 
 Currently, I am a Master's student in Chemical Engineering at the University of Calgary in Canada. I am focusing my studies on statistics and probabilistic, machine learning techniques, and programming languages.
 
@@ -22,4 +24,5 @@ Currently, I am volunteering at the Let's Talk Science community in Calgary, whi
 
 ## Hobbies
 
-You can say because I am from Brazil, but I do love football - I am not calling it soccer, because as you play with foot and there is a ball, it is football. Also, I enjoy video games and topics about the universe. I like meeting people also, so feel free to contact me if you want to share ideas or chat about some random topic!
+You can say because I am from Brazil, but I do love football - I am not calling it soccer, because as you play with feet and there is a ball, it is football. Also, I enjoy video games and topics about the universe. I like meeting people also, so feel free to contact me if you want to share ideas or chat about some random topic! 
+</div>
