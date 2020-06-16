@@ -15,6 +15,7 @@ navbar-links:
   About: "aboutme"
   Resources: "References"
   Projects: "TBD"
+  Resume: "Resume"
     #- Learn markdown: "https://www.markdowntutorial.com/"#
 
 # --- Logo --- #
