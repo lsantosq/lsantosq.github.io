@@ -1,24 +1,25 @@
 ---
 layout: page
 title: About me
-subtitle: Who am I? What are we? Are we in the Matrix?
 ---
-Although I don't have the answers to the philosophical questions, here I share a little bit about myself.
+Hello! My name is **Lucas Queiroz** and a Brazilian who loves soccer, video games, and science! I am fascinated by artificial intelligence and its applications nowadays. Here, I share more about myself! **Before you go**, if you want to contact me, you can use your preferred way at the footer of this website.
 
-_PS.: By the way, I would have taken the red pill_
-<p align="center">
-  <img width="360" height="200" src="https://media.giphy.com/media/1CNsm9ZkHF0m4/giphy.gif">
-</p>
+## Education
 
-My name is Lucas Queiroz and I am a Machine Learning/Data Science enthusiast, if I may say._It is too formal, right?_ So, in other words, I enjoy the crazy statistics stuff that has been developed so far, extract all information inside the data, and create awesome applications.
+I finished my BSc. degree in Chemical Engineering at _Universidade do Estado do Rio de Janeiro_ (UERJ) in Brazil, 2017. In 2015, I earned a full scholarship to study for one academic year at Purdue University in the United States. My preferred courses are Statistics, Process Control, and simulation.
 
-I am from Brazil and, currently, I am living in a cold, but an AWESOME place called Calgary, Canada. I graduated in Chemical Engineering at _Universidade do Estado do Rio de Janeiro_ (UERJ) in Brazil including a one-year experience abroad at the _Purdue University_ in the United States.
+Currently, I am a Master's student in Chemical Engineering at the University of Calgary in Canada. I am focusing my studies on statistics and probabilistic, machine learning techniques, and programming languages.
 
-Yeah, I beat the Chemical Engineering!! But guess what??? I've returned and now I am getting my **_Master of Engineering in Chemical Engineering_**.
-<p align="center">
-  <img width="300" height="260" src="https://media.giphy.com/media/ToMjGpx9F5ktZw8qPUQ/giphy.gif">
-</p>
+## Work Experience
 
-Now, besides learning more about reactions and transfer phenomena, my goal is to **gain knowledge on Machine Learning and Data Science concepts and apply them in my masters**!
+I have two years of experience working in the Sales department at Lubrizol. I improved my interpersonal and communication skills, which I believe are great assets for my professional career. Among several responsibilities, I analyzed data, elaborated different business reports to the sales team, and developed a few tools using Excel-VBA to save time on manual activities.
 
-Finaly, if you have a passion for soccer, games, machine learning, data science, wine, beer or any other random stuff and would like to have a great conversation, feel free to reach me out using your preferred method at the footer of this website!!
+## Volunteer
+
+In Brazil, I volunteered as a Poll Worker in the elections of 2012,2014, and 2016. Besides it required simple activities, I felt great assisting people in voting, maintaining the success of the poll station, and helping the country.
+
+Currently, I am volunteering at the Let's Talk Science community in Calgary, which is committed to develop youth and disseminate knowledge to the community. I am looking forward to helping them with this mission!
+
+## Hobbies
+
+You can say because I am from Brazil, but I do love football - I am not calling it soccer, because as you play with foot and there is a ball, it is football. Also, I enjoy video games and topics about the universe. I like meeting people also, so feel free to contact me if you want to share ideas or chat about some random topic!
