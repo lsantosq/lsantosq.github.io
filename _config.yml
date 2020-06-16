@@ -13,9 +13,9 @@ author: Lucas Queiroz
 
 navbar-links:
   About: "aboutme"
-  Resources: "References"
   Projects: "TBD"
   Resume: "/assets/img/Resume.pdf"
+  Resources: "References"
     #- Learn markdown: "https://www.markdowntutorial.com/"#
 
 # --- Logo --- #
