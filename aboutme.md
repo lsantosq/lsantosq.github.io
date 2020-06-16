@@ -2,8 +2,8 @@
 layout: page
 title: About me
 ---
-
 <div style="text-align: justify"> 
+
 Hello! My name is **Lucas Queiroz** and a Brazilian who loves soccer, video games, and science! I am fascinated by artificial intelligence and its applications nowadays. Here, I share more about myself! **Before you go**, if you want to contact me, you can use your preferred way at the footer of this website.
 
 ## Education
@@ -25,4 +25,5 @@ Currently, I am volunteering at the Let's Talk Science community in Calgary, whi
 ## Hobbies
 
 You can say because I am from Brazil, but I do love football - I am not calling it soccer, because as you play with feet and there is a ball, it is football. Also, I enjoy video games and topics about the universe. I like meeting people also, so feel free to contact me if you want to share ideas or chat about some random topic! 
+
 </div>
