@@ -4,8 +4,6 @@ title: Mobile Price Prediction - SVM and Logistic Regression
 tags: [Classification,SVM,Logistic Regression, OvR, OvO]
 ---
 
-# Mobile Price Prediction
-
 Hey all!
 
 Imagine you are starting a new cellphone business, let's called it BCC - **Best Cellphone Company**. After years of studies and developments, you have the best product on the market! You created a product that changes the _status quo_ ! Now it is fun time: time to sell it!
