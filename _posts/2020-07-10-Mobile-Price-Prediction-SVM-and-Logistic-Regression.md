@@ -6,7 +6,7 @@ tags: [Classification,SVM,Logistic Regression, OvR, OvO]
 
 Hey all!
 
-Imagine you are starting a new cellphone business, let's called it BCC - **Best Cellphone Company**. After years of studies and developments, you have the best product on the market! You created a product that changes the _status quo_ ! Now it is fun time: time to sell it!
+Imagine you are starting a new cellphone business, let's called it BMC - **Best Mobile Company**. After years of studies and developments, you have the best product on the market! You created a product that changes the _status quo_ ! Now it is fun time: time to sell it!
 
 **How are you going to place your innovative product in the market?** 
 * Are you going to sell it for a low price to get revenue based on quantity? 
