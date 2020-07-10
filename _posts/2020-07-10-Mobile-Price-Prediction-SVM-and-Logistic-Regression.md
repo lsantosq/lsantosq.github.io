@@ -3,6 +3,7 @@ layout: post
 title: Mobile Price Prediction - SVM and Logistic Regression
 tags: [Classification,SVM,Logistic Regression, OvR, OvO]
 ---
+
 # Mobile Price Prediction
 
 Hey all!
@@ -452,7 +453,7 @@ miss = (1-train.price_range.isnull().value_counts()/train.price_range.count())*1
 
 
 
-![png](img_mobile/output_8_1.png)
+![png](./img_mobile/output_8_1.png)
 
 
 ## We can see as well that the classes are evenly distributed as well!
@@ -496,7 +497,7 @@ sns.heatmap(corr,cmap='coolwarm')
 
 
 
-![png](img_mobile/output_11_1.png)
+![png](./img_mobile/output_11_1.png)
 
 
 1. There are minor correlations between pc/fc and three_g/four_g. However, we are not going to delete any variable. 
@@ -521,7 +522,7 @@ plt.scatter(train.index,ram,c=lbl, cmap=matplotlib.colors.ListedColormap(colors)
 
 
 
-![png](img_mobile/output_14_1.png)
+![png](./img_mobile/output_14_1.png)
 
 
 ### For now, let's focus on the attributes. They may have more to say when the output it is not around...
@@ -551,7 +552,7 @@ sns.heatmap(df.isnull(),cbar=False)
 
 
 
-![png](img_mobile/output_16_1.png)
+![png](./img_mobile/output_16_1.png)
 
 
 ### Continuous variables - Checking the distribution of each variable
@@ -581,7 +582,7 @@ plt.tight_layout()
 ```
 
 
-![png](img_mobile/output_19_0.png)
+![png](./img_mobile/output_19_0.png)
 
 
 
@@ -695,7 +696,7 @@ sns.heatmap(df_cont<=0,cbar=False)
 
 
 
-![png](img_mobile/output_22_1.png)
+![png](./img_mobile/output_22_1.png)
 
 
 There are several ways to transform the data into normal distribution. However, I failed to find a good way to transform the features that presented a flat distribution.
@@ -724,7 +725,7 @@ print('Kurtosis is {} and Skewness is {}'.format(kurt,skewness))
 
 
 
-![png](img_mobile/output_24_1.png)
+![png](./img_mobile/output_24_1.png)
 
 
 
