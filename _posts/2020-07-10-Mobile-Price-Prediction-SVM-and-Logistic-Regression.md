@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mobile Price Prediction: SVM and Logistic Regression
+title: Mobile Price Prediction - SVM and Logistic Regression
 tags: [Classification,SVM,Logistic Regression, OvR, OvO]
 ---
 # Mobile Price Prediction
