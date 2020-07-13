@@ -459,7 +459,7 @@ miss = (1-train.price_range.isnull().value_counts()/train.price_range.count())*1
 
 
 
-![png](/assets/img/output_8_1.png)
+![png](/assets/img/post/mobile_price_prediction/output_8_1.png)
 
 
 ### Luckily, there are no missing values! Also, we can see as well that the classes are evenly distributed!
@@ -503,7 +503,7 @@ sns.heatmap(corr,cmap='coolwarm')
 
 
 
-![png](/assets/img/output_11_1.png)
+![png](/assets/img/post/mobile_price_prediction/output_11_1.png)
 
 
 1. There are minor correlations between pc/fc and three_g/four_g. However, we are not going to delete any variable. 
@@ -539,7 +539,7 @@ sns.heatmap(df.isnull(),cbar=False)
 
 
 
-![png](/assets/img/output_14_1.png)
+![png](/assets/img/post/mobile_price_prediction/output_14_1.png)
 
 
 #### No missing values! Great!
@@ -571,7 +571,7 @@ plt.tight_layout()
 ```
 
 
-![png](/assets/img/output_18_0.png)
+![png](/assets/img/post/mobile_price_prediction/output_18_0.png)
 
 
 
@@ -693,7 +693,7 @@ print('Kurtosis is {} and Skewness is {}'.format(kurt,skewness))
 
 
 
-![png](/assets/img/output_22_1.png)
+![png](/assets/img/post/mobile_price_prediction/output_22_1.png)
 
 
 
@@ -877,7 +877,7 @@ plt.title('Count plot')
 
 
 
-![png](/assets/img/output_44_1.png)
+![png](/assets/img/post/mobile_price_prediction/output_44_1.png)
 
 
 # Conclusion
