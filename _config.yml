@@ -13,7 +13,7 @@ author: Lucas Queiroz
 
 navbar-links:
   About: "aboutme"
-  Projects: "TBD"
+  Projects: "project"
   Resume: "/assets/img/Resume.pdf"
   Resources: "References"
     #- Learn markdown: "https://www.markdowntutorial.com/"#
