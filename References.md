@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Resources
-subtitle: All of us should have our utility belt!
 ---
 
 Here, I share resources I find useful about Statistics, Data Science, Machine Learning and other topics. I will do my best to keep it up to date, so stay tunned!
