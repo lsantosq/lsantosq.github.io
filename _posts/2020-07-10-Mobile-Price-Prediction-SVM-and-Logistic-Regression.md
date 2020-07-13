@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Mobile Price Prediction - SVM and Logistic Regression
+title: Mobile Price Prediction - SVM and Logistic Regression Comparison
 tags: [Classification,SVM,Logistic Regression, OvR, OvO]
 ---
 
-Hey all!
+Hey guys,
 
-Imagine you are starting a new cellphone business, let's called it BMC - **Best Mobile Company**. After years of studies and developments, you have the best product on the market! You created a product that changes the _status quo_ ! Now it is fun time: time to sell it!
+Imagine you are starting a new cellphone business, let's called it BCC - **Best Cellphone Company**. After years of development, you designed the final product! You created a product that changes the _status quo_ ! 
+
+Now it is fun time: time to sell it!
 
 **How are you going to place your innovative product in the market?** 
 * Are you going to sell it for a low price to get revenue based on quantity? 
@@ -14,7 +16,8 @@ Imagine you are starting a new cellphone business, let's called it BMC - **Best 
 
 **_SOLUTION :_** Let's use market data to find the best price for your product!
 
-**_Key Takeaways_**
+**_Key Takeaways:_**
+    
     1. Data Treatment 
     2. Dealing with Multiple Class problems : One-vs-Rest (OvR) and One-vs-One (OvO)
     3. Comparison between Logistic Regression and Support Vector Machine
@@ -32,6 +35,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 
 %matplotlib inline
+
 ```
 
 
@@ -40,32 +44,36 @@ import matplotlib
 
 test = pd.read_csv('../data/datasets_11167_15520_test.csv')
 train = pd.read_csv('../data/datasets_11167_15520_train.csv')
+
 ```
 
 ## Before we begin, 
 
 I would like to share a mindset about working with data that may be silly, but it makes all sense for me.
 
-> For any important event - a date, a job interview - what do you do prior to your arrival? **you prepare yourself!** You search for information on the internet, social media (Instagram, Facebook, LinkedIn), ask friends and relatives. You do it because you want to create a picture in your mind of the person's food and movie tastes, beliefs, what he/she is like... It makes easier for you to have a **match** with them.
+> For any important event - for instance, a job interview - what do you do prior to your arrival? **You prepare yourself!** You search for information on the internet, social media (Instagram, Facebook, LinkedIn), employees ... You do it because you want to create a picture in your mind of the company, its work environment and the position that you are applying for.
 
-Let me tell you that: _considering data, it is not different at all!_ You must get to know the data, bring to a dinner, have some great chat at a coffee shop, maybe see a movie together. Then, when you feel prepared, when you feel that you know everything about them, what they like or not... After all that, you can ask for a commitment and start to create a deeper connection by using _statistical learning models_ !
+Let me tell you: _considering data, it is not different at all!_ You must get to know the data: bring to a dinner and have some great chat at a coffee shop. Then, when you feel prepared, when you feel that you know everything about them,  you can ask for a commitment. Then, you start to create a deeper connection by using _statistical learning models_ !
 
 
-## Checking out dataframes, description and the goal
+## A - Checking out dataframes, description and the goal
 
-Here, I superficially check how the dataset is presented, the description of each attribute, and also I establish a goal for the case study.
+Here, I superficially check how the dataset is presented.
 
 * Total number of Attributes: 21
+
     * Are there discrete variables? - Yes
         * Details: blue (Bluetooth - 0 No / 1 Yes), dual_sim (0 No / 1 Yes), four_g (0 No / 1 Yes), three_g (0 No / 1 Yes), touch_screen (0 No / 1 Yes), wifi (0 No / 1 Yes)
     * Are there any continuous variables? - Yes
         * Details: battery_power,clock_speed,int_memory,n_cores*,m_dep,mobile_wt,pc,px_height,px_width,ram,sc_h,sc_w,talk_time
-    *Output variable: price_range 
-        * Discrete variable
-        * Multiclass - 4 different classes: 0(low cost), 1(medium cost), 2(high cost) and 3(very high cost)
+        
+        
+* Output variable: price_range 
+    * Discrete variable
+    * Multiclass - 4 different classes: 0 (low cost), 1 (medium cost), 2 (high cost) and 3 (very high cost)
 
 
-**_GOAL_**: Based on certain attributes, our goal is to predict the position of our new cellphone using its characteristics.
+**_GOAL_**: Based on mobile attributes, our goal is to predict the class of our new cellphone's price.
 
 
 ```python
@@ -419,14 +427,14 @@ test.head()
 
 
 
-## Let's dive in the output variable: price_range
+## B - Let's dive in the output variable: price_range
 
-Here, we start with checking **missing values**. By its name already says, missing values are data that were not entered and we cannot use them as it is. There are many ways to treat missing data and several articles that show how to deal with it:
+Here, we start BY checking **missing values**. By its name already says, missing values are data that were not entered and we cannot use them as it is. There are many ways to treat missing data and several articles that show how to deal with it:
+
 * Filling it up with the arithmetic, harmonic mean
 * Filling it up with the mode and median
 * Or just ignoring and deleting them.
-    
-**_Luckily, there are no missing values!!_**
+
 
 
 ```python
@@ -454,20 +462,20 @@ miss = (1-train.price_range.isnull().value_counts()/train.price_range.count())*1
 ![png](/assets/img/output_8_1.png)
 
 
-## We can see as well that the classes are evenly distributed as well!
+### Luckily, there are no missing values! Also, we can see as well that the classes are evenly distributed!
 
 It is great for us! Let me show you the reason...
 
 > Suppose the price range is distributed as 90% class 0, 10% class 1 and 0% class 2 and 3. If we built a model that the output is class 0 regardless of the input, we would be right 90% of cases!
 
-## Now that we already searched for the output, let's ask its relatives and friends...
+## C - Now, let's work with the features as well
 
 I used a great tool to show the **CORRELATION** between the attributes and output.
 
 A high correlation between the output and attribute is great because based on the attribute, you can certainly predict the output. 
 
-However, a high correlation among attributes is bad, because it reduces the success of your model. Therefore, it may be useful to filter some of the attributes.
-> It is the same when you have to do a group homework when 2 classmates have strong opinions. They both want to do well on the homework and get an A (prediction), but they spend too much time discussing it (same information).
+However, a high correlation among features is bad, because it reduces the performance of your model. Therefore, it may be useful to filter some of the attributes.
+> It is the same when you have to do a group homework when 2 classmates have strong opinions. They both want to do well on the homework and get an A (high accuracy on predictions), but they spend too much time discussing it (giving the same information).
 
 #### IMPORTANT :
 The heatmap tool only considers the correlation between **two variables** or, in other words, 2 dimensional. In fact, the correlation may occur in a multi-dimensional space. Even if in a 2-dimensional space there is a low correlation index, if it is added the third attribute, it may show correlation and decrease the effectiveness of the model!
@@ -490,7 +498,7 @@ sns.heatmap(corr,cmap='coolwarm')
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f3d87089e90>
+    <matplotlib.axes._subplots.AxesSubplot at 0x7f962d757310>
 
 
 
@@ -502,28 +510,7 @@ sns.heatmap(corr,cmap='coolwarm')
     We will keep an eye on these pairs.
 2. The variable ram has a big role in the price prediction
 
-Based on the previous heatmap, we may see a high correlation between the output and the feature ram. Let's investigate it a litte bit more...
-
-
-```python
-ram = train.ram.values
-lbl = train.price_range.values
-colors = ['blue','orange','green','red']
-plt.scatter(train.index,ram,c=lbl, cmap=matplotlib.colors.ListedColormap(colors))
-```
-
-
-
-
-    <matplotlib.collections.PathCollection at 0x7f3d87093510>
-
-
-
-
-![png](/assets/img/output_14_1.png)
-
-
-### For now, let's focus on the attributes. They may have more to say when the output it is not around...
+#### Missing values - Features
 
 
 ```python
@@ -532,6 +519,9 @@ train_id = train.index.values.shape[0]
 test_id = test.index.values.shape[0]
 train.drop('price_range',inplace=True,axis=1)
 
+#Collecting ram values
+ram = train['ram']
+
 #Train and test data set combined
 df = pd.concat([train,test],ignore_index=True)
 
@@ -539,23 +529,24 @@ df = pd.concat([train,test],ignore_index=True)
 plt.figure(figsize=(15,15))
 sns.heatmap(df.isnull(),cbar=False)
 
-## No missing values! Great!
 ```
 
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f3d86ad9910>
+    <matplotlib.axes._subplots.AxesSubplot at 0x7f962c61f410>
 
 
 
 
-![png](/assets/img/output_16_1.png)
+![png](/assets/img/output_14_1.png)
 
 
-### Continuous variables - Checking the distribution of each variable
+#### No missing values! Great!
 
-The distribution of continuous features has a big role in the performance of the solution of any machine learning problem. The most famous statistical distribution is Normal/Gaussian distribution. Most of all statistical learning models are based on the assumption of normality of data and, in some cases, they may accept deviations from normality.
+#### Continuous variables - Checking the probability distribution
+
+The distribution of continuous features plays a big role in the performance of the model in any machine learning problem. The most famous statistical distribution is Normal/Gaussian distribution. Most of all statistical learning models are based on the assumption of normality of data and, in some cases, they may accept deviations from normality.
 
 When working with data, it is important to check the distribution of continuous variables and transform them into Gaussian distribution when possible.
 
@@ -580,7 +571,7 @@ plt.tight_layout()
 ```
 
 
-![png](/assets/img/output_19_0.png)
+![png](/assets/img/output_18_0.png)
 
 
 
@@ -676,27 +667,6 @@ stats
 
 Three important parameters to check for normality are the **graph, kurtosis and skewness** . Here, we can see that no feature presented a normal distribution.
 
-
-```python
-#Are there negative values?? Or zero values?
-plt.figure(figsize=(15,15))
-sns.heatmap(df_cont<=0,cbar=False)
-
-#There are too many values equal to zero, therefore Box Cox transformation may not be valuable...
-#I could not find a better way to transform flat distributions to normal distribution... Let's focus 'px_height', which is right skewed.
-```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7f3d83e62bd0>
-
-
-
-
-![png](/assets/img/output_22_1.png)
-
-
 There are several ways to transform the data into normal distribution. However, I failed to find a good way to transform the features that presented a flat distribution.
 
 Therefore, I focused on the "px_height" feature, which presented a right skewed distribution. Also, I realized that **Box-Cox** transformation does not work well with zero values in the dataset. Then, I used **yeo-johnson** transformation.
@@ -723,7 +693,7 @@ print('Kurtosis is {} and Skewness is {}'.format(kurt,skewness))
 
 
 
-![png](/assets/img/output_24_1.png)
+![png](/assets/img/output_22_1.png)
 
 
 
@@ -746,7 +716,6 @@ _**Plus, we are going to try using only the variable "ram"**_.
 ```python
 #Importing libraries
 from sklearn.preprocessing import RobustScaler,StandardScaler
-import xgboost as xgb
 from sklearn.model_selection import cross_val_score, train_test_split, StratifiedKFold
 from sklearn.svm import SVC
 from sklearn.multiclass import OneVsRestClassifier,OneVsOneClassifier
@@ -798,10 +767,10 @@ svc = SVC(C=1,kernel='rbf',random_state=43,probability=True)
 
 #Score
 score = auc_cv(svc)
-print('SVC score = {} based on AUC-ROC'.format(score))
+print('SVC score = {} based on AUC-ROC'.format(round(score,3)))
 ```
 
-    SVC score = 0.9888866666666667 based on AUC-ROC
+    SVC score = 0.989 based on AUC-ROC
 
 
 As we can see, SVM performed pretty well when compared to Logistic Regression. The data presents a non-linear distribution and it is hard for the logistic regression model to perform well. Therefore, based on hyperplanes, SVM achieved a greater metric.
@@ -821,10 +790,10 @@ lreg1 = LogisticRegression(penalty='l2',C=1,class_weight='balanced',random_state
 
 #Score
 score = auc_cv(lreg1)
-print('Logistic Regression score = {} based on AUC-ROC'.format(score))
+print('Logistic Regression score = {} based on AUC-ROC'.format(round(score,3)))
 ```
 
-    Logistic Regression score = 0.8751033333333332 based on AUC-ROC
+    Logistic Regression score = 0.875 based on AUC-ROC
 
 
 ### Logistic Regression with regularization
@@ -842,10 +811,10 @@ lreg2 = LogisticRegression(penalty='l2',C=0.1,class_weight='balanced',random_sta
 
 #Score
 score = auc_cv(lreg2)
-print('Logistic Regression score = {} based on AUC-ROC'.format(score))
+print('Logistic Regression score = {} based on AUC-ROC'.format(round(score,3)))
 ```
 
-    Logistic Regression score = 0.8761966666666667 based on AUC-ROC
+    Logistic Regression score = 0.876 based on AUC-ROC
 
 
 ### Logistic Regression - Feature Engineering
@@ -856,17 +825,17 @@ print('Logistic Regression score = {} based on AUC-ROC'.format(score))
 from sklearn.linear_model import LogisticRegression
 
 #Train data
-train = ram.reshape(-1,1)
+train = ram.values.reshape(-1,1)
 
 #Model
 lreg3 = LogisticRegression(penalty='l2',C=1,class_weight='balanced',random_state=54,multi_class='ovr')
 
 #Score
 score = auc_cv(lreg3)
-print('Logistic Regression score = {} based on AUC-ROC'.format(score))
+print('Logistic Regression score = {} based on AUC-ROC'.format(round(score,3)))
 ```
 
-    Logistic Regression score = 0.90611 based on AUC-ROC
+    Logistic Regression score = 0.906 based on AUC-ROC
 
 
 Here, I implemented logistic regression in three different ways to see the importance of **regularization** and **feature engineering**.
@@ -874,3 +843,45 @@ Here, I implemented logistic regression in three different ways to see the impor
 Regularization is important to reduce the overfitting of your model. Here, it presented a slight improvement in the performance.
 
 However, the greatest improvement was with feature engineering. Feature Engineering is the selection of key features to use in the model instead of using all of them. If all input variables are used, the model may perform poorly since the effects and information of each of them are mixed with each other. Therefore, using only the feature "ram", we can see an increase in the AUC-ROC metric, which means a greater performance!
+
+# Testing
+
+Usually, these kaggle datasets provide a leaderboard, which ranks the performance of your model on test datasets. However, I could not find any board to upload my best model and check its performance. Therefore, I am going to show only the distribution of the predict outputs using the model with the highest metric.
+
+
+```python
+#Training SVM
+
+## Train data
+train = train_set
+
+#fit
+svc_model = svc.fit(train_set,y_train)
+
+#predict
+pred = svc_model.predict(test_set)
+
+#Creating a dataframe
+prediction = pd.DataFrame(pred,columns = ['predict'])
+
+#Count plot
+sns.countplot(x='predict',data=prediction)
+plt.title('Count plot')
+```
+
+
+
+
+    Text(0.5, 1.0, 'Count plot')
+
+
+
+
+![png](/assets/img/output_44_1.png)
+
+
+# Conclusion
+
+As we can see, the best performance was achieved using SVM as classifier. The data is presented in a non-linear way that lowers the performance of logistic regression. However, there are several ways to increase the performance of the model - feature engineering and regularization. 
+
+When testing the model, we noticed that the mobile selling price has a higher chance to be classified as "high cost" based on the dataset.
