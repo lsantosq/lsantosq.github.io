@@ -16,9 +16,9 @@ Here, I share resources I find useful about Statistics, Data Science, Machine Le
 
 
 * ## Online Courses:
-    * **Machine Learning (Coursera)**: [Machine.Learning](https://www.coursera.org/learn/machine-learning)
+    * **Machine Learning (Coursera)**: [Machine Learning](https://www.coursera.org/learn/machine-learning)
     * **Python and Basic Data Science (Udemy/Portuguese)**:[Python for Data Science in Portuguese](https://www.udemy.com/course/python-para-data-science-e-machine-learning/) 
-    * **SQL for Data Science**: [Not so great, but it is ok](https://www.coursera.org/specializations/learn-sql-basics-data-science#courses)
+    * **SQL for Data Science**: [UC Davis - SQL](https://www.coursera.org/specializations/learn-sql-basics-data-science#courses)
     * **Deep Learning (Coursera)**: [AndrewNg](https://www.coursera.org/specializations/deep-learning#about)
 
 * ## Database:
@@ -28,7 +28,7 @@ Here, I share resources I find useful about Statistics, Data Science, Machine Le
     * **Kaggle**: [Kaggle](https://www.kaggle.com/)
 
 * ## Social Media:
-    * **Welcome ai**: [Welcome.ia](https://instagram.com/welcome.ai?igshid=vb0z9h4v9cdn)
+    * **Welcome ai**: [Welcome ai](https://instagram.com/welcome.ai?igshid=vb0z9h4v9cdn)
     * **Flai Inteligencia Artificial** (in Portuguese): [Flai](https://instagram.com/flai.inteligencia.artificial?igshid=pex29t25esmq)
 
 * ## Network (Only if you live in Calgary):
@@ -36,5 +36,5 @@ Here, I share resources I find useful about Statistics, Data Science, Machine Le
 
 * ## Extra websites:
     * **Learning Markdown**: [Tutorial](https://www.markdowntutorial.com/)
-    * **Dealing with problems using Git**: [Oh.Shit!](https://ohshitgit.com/)
-    * **Great general reading material**: [Towards.data.science](https://towardsdatascience.com/)
+    * **Dealing with problems using Git**: [Oh Shit!](https://ohshitgit.com/)
+    * **Great general reading material**: [Towards data science](https://towardsdatascience.com/)
