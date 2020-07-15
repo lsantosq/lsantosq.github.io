@@ -34,7 +34,7 @@ Graphically, the regression seems to be a great method to adjust the data (R2 = 
 
  To find the best model, the ACF and PACF correlograms are used.
 
- > I presented more information about ACF and PACF correlograms on the final report. [You can find it on my Git](https://github.com/lsantosq/Global-Warming-Is-there-evidence-it-exists-/blob/master/global_warming_report.pdf).
+ > There are more information about ACF and PACF correlograms on the final report. [You can find it on my Git](https://github.com/lsantosq/Global-Warming-Is-there-evidence-it-exists-/blob/master/global_warming_report.pdf).
 
  ![fig3](/assets/img/post/global_warming/acf_pacf.PNG)
 
@@ -46,7 +46,7 @@ The ARIMA(0,1,2) shows better accuracy in regards to residual sums of squares. A
 
  ![fig5](/assets/img/post/global_warming/residual_arima.PNG)
 
- # Conclusions
+ ## Conclusions
 
  After all, there is evidence to **confirm the increasing tendency of global annual temperature** within the periods considered in this work. Considering global warming is associated with the increase in global temperature, **we have evidence that global warming exists**.
 
