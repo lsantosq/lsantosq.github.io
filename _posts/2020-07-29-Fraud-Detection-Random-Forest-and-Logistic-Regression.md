@@ -220,6 +220,7 @@ print('The other variables have {} % of missing values.'.format(other_var.isnull
 ```
 
     The other variables have 0.0 % of missing values.
+ 
  <br/>
  
 ### Time and Amount variables: Distribution
@@ -566,6 +567,7 @@ print('Random forest - ROC AUC: {}'.format(round(final_score,4)))
 ```
 
     Random forest - ROC AUC: 0.9402
+
  <br/>
  
 ### Conclusion
