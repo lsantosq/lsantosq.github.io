@@ -46,7 +46,8 @@ test = pd.read_csv('../data/datasets_11167_15520_test.csv')
 train = pd.read_csv('../data/datasets_11167_15520_train.csv')
 
 ```
-
+ <br/>
+ 
 ## Before we begin, 
 
 I would like to share a mindset about working with data that may be silly, but it makes all sense for me.
@@ -82,351 +83,14 @@ Here, I superficially check how the dataset is presented.
 train.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>battery_power</th>
-      <th>blue</th>
-      <th>clock_speed</th>
-      <th>dual_sim</th>
-      <th>fc</th>
-      <th>four_g</th>
-      <th>int_memory</th>
-      <th>m_dep</th>
-      <th>mobile_wt</th>
-      <th>n_cores</th>
-      <th>...</th>
-      <th>px_height</th>
-      <th>px_width</th>
-      <th>ram</th>
-      <th>sc_h</th>
-      <th>sc_w</th>
-      <th>talk_time</th>
-      <th>three_g</th>
-      <th>touch_screen</th>
-      <th>wifi</th>
-      <th>price_range</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>842</td>
-      <td>0</td>
-      <td>2.2</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>7</td>
-      <td>0.6</td>
-      <td>188</td>
-      <td>2</td>
-      <td>...</td>
-      <td>20</td>
-      <td>756</td>
-      <td>2549</td>
-      <td>9</td>
-      <td>7</td>
-      <td>19</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1021</td>
-      <td>1</td>
-      <td>0.5</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>53</td>
-      <td>0.7</td>
-      <td>136</td>
-      <td>3</td>
-      <td>...</td>
-      <td>905</td>
-      <td>1988</td>
-      <td>2631</td>
-      <td>17</td>
-      <td>3</td>
-      <td>7</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>563</td>
-      <td>1</td>
-      <td>0.5</td>
-      <td>1</td>
-      <td>2</td>
-      <td>1</td>
-      <td>41</td>
-      <td>0.9</td>
-      <td>145</td>
-      <td>5</td>
-      <td>...</td>
-      <td>1263</td>
-      <td>1716</td>
-      <td>2603</td>
-      <td>11</td>
-      <td>2</td>
-      <td>9</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>615</td>
-      <td>1</td>
-      <td>2.5</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>10</td>
-      <td>0.8</td>
-      <td>131</td>
-      <td>6</td>
-      <td>...</td>
-      <td>1216</td>
-      <td>1786</td>
-      <td>2769</td>
-      <td>16</td>
-      <td>8</td>
-      <td>11</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1821</td>
-      <td>1</td>
-      <td>1.2</td>
-      <td>0</td>
-      <td>13</td>
-      <td>1</td>
-      <td>44</td>
-      <td>0.6</td>
-      <td>141</td>
-      <td>2</td>
-      <td>...</td>
-      <td>1208</td>
-      <td>1212</td>
-      <td>1411</td>
-      <td>8</td>
-      <td>2</td>
-      <td>15</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 21 columns</p>
-</div>
-
-
-
-
 ```python
 # Test dataset
     #Here, I drop the "id" column that we are not going to need it.
 test.drop('id',inplace=True,axis=1)
 test.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>battery_power</th>
-      <th>blue</th>
-      <th>clock_speed</th>
-      <th>dual_sim</th>
-      <th>fc</th>
-      <th>four_g</th>
-      <th>int_memory</th>
-      <th>m_dep</th>
-      <th>mobile_wt</th>
-      <th>n_cores</th>
-      <th>pc</th>
-      <th>px_height</th>
-      <th>px_width</th>
-      <th>ram</th>
-      <th>sc_h</th>
-      <th>sc_w</th>
-      <th>talk_time</th>
-      <th>three_g</th>
-      <th>touch_screen</th>
-      <th>wifi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1043</td>
-      <td>1</td>
-      <td>1.8</td>
-      <td>1</td>
-      <td>14</td>
-      <td>0</td>
-      <td>5</td>
-      <td>0.1</td>
-      <td>193</td>
-      <td>3</td>
-      <td>16</td>
-      <td>226</td>
-      <td>1412</td>
-      <td>3476</td>
-      <td>12</td>
-      <td>7</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>841</td>
-      <td>1</td>
-      <td>0.5</td>
-      <td>1</td>
-      <td>4</td>
-      <td>1</td>
-      <td>61</td>
-      <td>0.8</td>
-      <td>191</td>
-      <td>5</td>
-      <td>12</td>
-      <td>746</td>
-      <td>857</td>
-      <td>3895</td>
-      <td>6</td>
-      <td>0</td>
-      <td>7</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1807</td>
-      <td>1</td>
-      <td>2.8</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>27</td>
-      <td>0.9</td>
-      <td>186</td>
-      <td>3</td>
-      <td>4</td>
-      <td>1270</td>
-      <td>1366</td>
-      <td>2396</td>
-      <td>17</td>
-      <td>10</td>
-      <td>10</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1546</td>
-      <td>0</td>
-      <td>0.5</td>
-      <td>1</td>
-      <td>18</td>
-      <td>1</td>
-      <td>25</td>
-      <td>0.5</td>
-      <td>96</td>
-      <td>8</td>
-      <td>20</td>
-      <td>295</td>
-      <td>1752</td>
-      <td>3893</td>
-      <td>10</td>
-      <td>0</td>
-      <td>7</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1434</td>
-      <td>0</td>
-      <td>1.4</td>
-      <td>0</td>
-      <td>11</td>
-      <td>1</td>
-      <td>49</td>
-      <td>0.5</td>
-      <td>108</td>
-      <td>6</td>
-      <td>18</td>
-      <td>749</td>
-      <td>810</td>
-      <td>1773</td>
-      <td>15</td>
-      <td>8</td>
-      <td>7</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
+ <br/>
+ 
 ## B - Let's dive in the output variable: price_range
 
 Here, we start BY checking **missing values**. By its name already says, missing values are data that were not entered and we cannot use them as it is. There are many ways to treat missing data and several articles that show how to deal with it:
@@ -587,7 +251,7 @@ stats = pd.DataFrame([kurt,skewness],columns = cont, index = ['Kurtosis','Skewne
 stats
 ```
 
-
+ <br/>
 
 
 <div>
@@ -705,7 +369,8 @@ df['px_height'] = tr
 train_set = df.values[:train_id]
 test_set = df.values[train_id:]
 ```
-
+ <br/>
+ 
 ## Multiple classification problem
 
 * We are going to perform two machine learning techiniques: **SVM** and **Logistic Regression**. 
@@ -747,10 +412,11 @@ def auc_cv(model):
     auc= cross_val_score(model, train, y_train, scoring="roc_auc_ovr", cv = kf,n_jobs=-1)
     return(np.mean(auc))
 ```
-
+ <br/>
+ 
 OBS.: I am using One-vs-Rest.
 
-# Training
+## Training
 
 ### Support Vector Machine
 
@@ -772,6 +438,7 @@ print('SVC score = {} based on AUC-ROC'.format(round(score,3)))
 
     SVC score = 0.989 based on AUC-ROC
 
+ <br/>
 
 As we can see, SVM performed pretty well when compared to Logistic Regression. The data presents a non-linear distribution and it is hard for the logistic regression model to perform well. Therefore, based on hyperplanes, SVM achieved a greater metric.
 
@@ -795,6 +462,7 @@ print('Logistic Regression score = {} based on AUC-ROC'.format(round(score,3)))
 
     Logistic Regression score = 0.875 based on AUC-ROC
 
+ <br/>
 
 ### Logistic Regression with regularization
 
@@ -816,6 +484,7 @@ print('Logistic Regression score = {} based on AUC-ROC'.format(round(score,3)))
 
     Logistic Regression score = 0.876 based on AUC-ROC
 
+ <br/>
 
 ### Logistic Regression - Feature Engineering
 
@@ -844,7 +513,7 @@ Regularization is important to reduce the overfitting of your model. Here, it pr
 
 However, the greatest improvement was with feature engineering. Feature Engineering is the selection of key features to use in the model instead of using all of them. If all input variables are used, the model may perform poorly since the effects and information of each of them are mixed with each other. Therefore, using only the feature "ram", we can see an increase in the AUC-ROC metric, which means a greater performance!
 
-# Testing
+## Testing
 
 Usually, these kaggle datasets provide a leaderboard, which ranks the performance of your model on test datasets. However, I could not find any board to upload my best model and check its performance. Therefore, I am going to show only the distribution of the predict outputs using the model with the highest metric.
 
