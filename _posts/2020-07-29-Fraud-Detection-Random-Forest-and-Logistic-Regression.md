@@ -62,7 +62,6 @@ from sklearn.metrics import roc_auc_score
 df=pd.read_csv('../data/creditcard.csv')
 ```
 
-# 
 ## Introduction
 
 The dataset contains numerical values after PCA transformation. _The original data could not be shared due to confidentiality issues_.
@@ -84,8 +83,24 @@ other_var=df[['Time','Amount']]
 
 df.head(10)
 ```
-
-
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
 
 
 <div>
