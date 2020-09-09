@@ -84,7 +84,7 @@ other_var=df[['Time','Amount']]
 df.head(10)
 ```
 
-![png](/assets/img/post/fraud_detection/Figure_table.jpg)
+![png](/assets/img/post/fraud_detection/Figure_table.JPG)
 
 
 ## Output - Class
