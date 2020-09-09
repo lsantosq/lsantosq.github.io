@@ -132,6 +132,7 @@ print('The output variable has {} % of missing values.'.format(output.isnull().s
 ```
 
     The output variable has 0.0 % of missing values.
+    
  <br/>
  
 ## Feature Analysis - PCA
