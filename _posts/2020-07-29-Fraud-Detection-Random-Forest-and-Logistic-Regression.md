@@ -85,7 +85,7 @@ df.head(10)
 ```
 
 ![png](/assets/img/post/fraud_detection/Figure_table.JPG)
-
+<img src="Figure_table.JPG" width="200" height="200" />
 
 ## Output - Class
 
