@@ -62,7 +62,6 @@ from sklearn.metrics import roc_auc_score
 df=pd.read_csv('../data/creditcard.csv')
 ```
  <br/>
-
 ## Introduction
 
 The dataset contains numerical values after PCA transformation. _The original data could not be shared due to confidentiality issues_.
