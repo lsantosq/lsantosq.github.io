@@ -62,6 +62,7 @@ from sklearn.metrics import roc_auc_score
 df=pd.read_csv('../data/creditcard.csv')
 ```
  <br/>
+ 
 ## Introduction
 
 The dataset contains numerical values after PCA transformation. _The original data could not be shared due to confidentiality issues_.
@@ -83,7 +84,8 @@ other_var=df[['Time','Amount']]
 
 df.head(10)
 ```
-
+ <br/>
+ 
 ## Output - Class
 
 **We begin analyzing the output variable - Class**
@@ -130,8 +132,8 @@ print('The output variable has {} % of missing values.'.format(output.isnull().s
 ```
 
     The output variable has 0.0 % of missing values.
-
-
+ <br/>
+ 
 ## Feature Analysis - PCA
 
 The principal component analysis is a statistical method to high dimensional data onto a lower-dimensional space by maximizing the variance of each dimension. 
@@ -217,8 +219,8 @@ print('The other variables have {} % of missing values.'.format(other_var.isnull
 ```
 
     The other variables have 0.0 % of missing values.
-
-
+ <br/>
+ 
 ### Time and Amount variables: Distribution
 
 It does not make sense to analyze the distribution of numerical since they are results of PCA transformation. Then, I analyze the distribution of Time and Amount variables and perform transformations, if needed.
@@ -276,7 +278,8 @@ plt.tight_layout()
 df['Time'] = t_std
 df['Amount'] = amt_std
 ```
-
+ <br/>
+ 
 ### Model selection
 
 **Note: Data is skewed.**
@@ -330,7 +333,8 @@ x_test_full = pd.concat([zero_test, one_test], axis=0)
 x_test = x_test_full.drop(['Time','Amount'],axis=1)
 y_test = pd.concat([y_zero_test, y_one_test], axis=0)
 ```
-
+ <br/>
+ 
 ### Multivariate Gaussian Distribution
 
 Here, we assume that the dataset follows a normal distribution. Then, we calculate the probability of each example and based on a threshold, we classify it.
@@ -404,7 +408,8 @@ from sklearn.model_selection import RepeatedStratifiedKFold
 
 cv = RepeatedStratifiedKFold(n_splits=10,n_repeats=3,random_state=42)
 ```
-
+ <br/>
+ 
 ### Logistic Regression - Cross Validation
 
 Here, I try two different logistic regression models:
@@ -412,7 +417,7 @@ Here, I try two different logistic regression models:
 * Without regularization - 20 components
 * After SMOTE and RUS - All components
 
-###### Cross Validation - Both Logistic Regression and Random Forest
+#### Cross Validation - Both Logistic Regression and Random Forest
 
 I used the Repeated Stratified KFold as cross validation method. It runs the models "n" times and keeps the original dataset distribution on each created fold (K = 10 folds). 
 
@@ -464,8 +469,8 @@ print('After preprocessing with SMOTE and RUS, Logistic regression performance i
 ```
 
     After preprocessing with SMOTE and RUS, Logistic regression performance is 0.9755
-
-
+ <br/>
+ 
 ### Random Forest - Cross Validation
 
 Random Forest is one of several methods recognized by achieving good performance on an imbalanced dataset. Therefore, I apply it in this study.
@@ -560,8 +565,8 @@ print('Random forest - ROC AUC: {}'.format(round(final_score,4)))
 ```
 
     Random forest - ROC AUC: 0.9402
-
-
+ <br/>
+ 
 ### Conclusion
 
 It is amazing to see this usage of data to prevent fraudulent transactions or any other application. 
