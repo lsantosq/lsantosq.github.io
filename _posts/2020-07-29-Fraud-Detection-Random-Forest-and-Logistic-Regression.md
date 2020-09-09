@@ -471,6 +471,7 @@ print('After preprocessing with SMOTE and RUS, Logistic regression performance i
 ```
 
     After preprocessing with SMOTE and RUS, Logistic regression performance is 0.9755
+
  <br/>
  
 ### Random Forest - Cross Validation
